@@ -26,6 +26,8 @@ body {
     width: 100%;
 }
 
+/* Rules for the sidebar */
+
 .sidebar {
     background-color: var(--sidebar-color);
     grid-column: 1 / 2;
@@ -84,11 +86,89 @@ body {
     gap: 5%;
 }
 
+ /* Rules for the header */
 .header {
     background-color: rgb(209, 203, 203);
     grid-column: 2 / 3;
     grid-row: 1 / 2;
 
+    display: grid;
+    grid-template-rows: 1fr 1.3fr;
+    justify-items: stretch;
+
+}
+
+.header-top {
+    background-color: salmon;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    align-items: center;
+}
+
+.search-bar {
+    justify-self: stretch;
+    height: 100%;
+
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 5fr;
+    grid-gap: 10px;
+}
+
+.header-top input[type="text"] {
+    height: 23px;
+    width: 80%;
+
+    border: none;
+    border-radius: 20px;
+
+    align-self: center;
+    justify-self: start;
+
+    padding: 4px;
+
+}
+
+.search-bar img:first-child {
+    align-self: center;
+    justify-self: end;
+
+    height: 20px;
+    width: 20px;
+}
+
+.header-bottom {
+    background-color: seagreen;
+    height: 100%;
+}
+
+.user-bar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.user-bar img:first-child {
+    height: 30px;
+    width: 30px;
+
+    cursor: pointer;
+}
+
+.flex-container img.user-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 80px;
 }
 
 .projects {
@@ -96,3 +176,4 @@ body {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
 }
+
