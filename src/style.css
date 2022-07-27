@@ -19,7 +19,7 @@
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1.3fr 5fr;
+    grid-template-rows: minmax(150px, 190px) 5fr;
 }
 
 /* Rules for the sidebar */
@@ -278,7 +278,7 @@
 
 .project-icons-container {
     display: flex;
-    
+
     align-items: center;
     justify-content: flex-end;
 
