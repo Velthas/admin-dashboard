@@ -13,11 +13,16 @@ import user from './images/user.svg';
 import userAlt from './images/users-alt.svg';
 import logo from './images/interface.svg';
 
-//Header Images
+// Header Images
 import noBell from './images/bell-no.svg';
 import yesBell from './images/bell-yes.svg';
 import search from './images/search.svg';
 import birb from './images/birb.jpg';
+
+// Projects
+import star from './images/star.svg';
+import watch from './images/eye.svg';
+import share from './images/share.svg';
 
 // Gather all images in the sidebar based on location in the grid
 const images = [logo, home, user, comment, past, ballot, userAlt, settings, help, protection];
@@ -33,7 +38,7 @@ for(let i = 0; i < sidebarIcons.length; i++) {
 // Gather all images in the header
 const headerImages = [search, noBell, birb];
 
-// Gather all the images element in the hader
+// Gather all the images element in the header
 const headerImgs = Array.from(document.querySelectorAll('.header img'));
 
 // Change their source dinamically
@@ -41,9 +46,29 @@ for(let i = 0; i < headerImages.length; i++) {
     headerImgs[i].src = headerImages[i];
 }
 
+// Set profile picture
 const profilePicture = document.querySelector('.user-info img');
 profilePicture.src = birb;
 
+
+// Gather images needed for all the project-item divs.
+const projectImages = [star, watch, share];
+
+// Gather all the img elements of these project divs.
+const projectImgElements = Array.from(document.querySelectorAll('.project-icons-container img'));
+
+// We will use this in the loop
+let imgCounter = 0;
+
+//Place them dinamically
+for(let i = 0; i < projectImgElements.length; i++) {
+    // Use a counter for this
+    projectImgElements[i].src = projectImages[imgCounter];
+    imgCounter++
+
+    // If divisible by three, reset it
+    if(imgCounter % 3 === 0) imgCounter = 0;
+}
 
 
 
