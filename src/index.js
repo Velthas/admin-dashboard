@@ -41,6 +41,10 @@ for(let i = 0; i < headerImages.length; i++) {
     headerImgs[i].src = headerImages[i];
 }
 
+const profilePicture = document.querySelector('.user-info img');
+profilePicture.src = birb;
+
+
 
 
 
