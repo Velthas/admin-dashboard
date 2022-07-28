@@ -24,6 +24,11 @@ import star from './images/star.svg';
 import watch from './images/eye.svg';
 import share from './images/share.svg';
 
+// Star Players
+import pinebro from './images/pineapple.jpg';
+import planebro from './images/plane.jpg';
+import shiba from './images/shiba.png';
+
 // Gather all images in the sidebar based on location in the grid
 const images = [logo, home, user, comment, past, ballot, userAlt, settings, help, protection];
 
@@ -69,6 +74,16 @@ for(let i = 0; i < projectImgElements.length; i++) {
     // If divisible by three, reset it
     if(imgCounter % 3 === 0) imgCounter = 0;
 }
+
+// Place the images in the heroes section
+const heroImages = [pinebro, planebro, shiba];
+
+const heroImgElements = Array.from(document.querySelectorAll('.stars img'));
+
+for(let i = 0; i < heroImgElements.length; i++) {
+    heroImgElements[i].src = heroImages[i];
+}
+
 
 
 
