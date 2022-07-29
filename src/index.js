@@ -30,14 +30,25 @@ import planebro from './images/plane.jpg';
 import shiba from './images/shiba.png';
 
 // Gather all images in the sidebar based on location in the grid
-const images = [logo, home, user, comment, past, ballot, userAlt, settings, help, protection];
+const images = [
+  logo,
+  home,
+  user,
+  comment,
+  past,
+  ballot,
+  userAlt,
+  settings,
+  help,
+  protection,
+];
 
 // Get all the image elements inside the sidebar
 const sidebarIcons = Array.from(document.querySelectorAll('.sidebar img'));
 
 // Dynamically set the source
-for(let i = 0; i < sidebarIcons.length; i++) {
-    sidebarIcons[i].src = images[i];
+for (let i = 0; i < sidebarIcons.length; i++) {
+  sidebarIcons[i].src = images[i];
 }
 
 // Gather all images in the header
@@ -47,32 +58,33 @@ const headerImages = [search, noBell, birb];
 const headerImgs = Array.from(document.querySelectorAll('.header img'));
 
 // Change their source dinamically
-for(let i = 0; i < headerImages.length; i++) {
-    headerImgs[i].src = headerImages[i];
+for (let i = 0; i < headerImages.length; i++) {
+  headerImgs[i].src = headerImages[i];
 }
 
 // Set profile picture
 const profilePicture = document.querySelector('.user-info img');
 profilePicture.src = birb;
 
-
 // Gather images needed for all the project-item divs.
 const projectImages = [star, watch, share];
 
 // Gather all the img elements of these project divs.
-const projectImgElements = Array.from(document.querySelectorAll('.project-icons-container img'));
+const projectImgElements = Array.from(
+  document.querySelectorAll('.project-icons-container img')
+);
 
 // We will use this in the loop
 let imgCounter = 0;
 
 //Place them dinamically
-for(let i = 0; i < projectImgElements.length; i++) {
-    // Use a counter for this
-    projectImgElements[i].src = projectImages[imgCounter];
-    imgCounter++
+for (let i = 0; i < projectImgElements.length; i++) {
+  // Use a counter for this
+  projectImgElements[i].src = projectImages[imgCounter];
+  imgCounter++;
 
-    // If divisible by three, reset it
-    if(imgCounter % 3 === 0) imgCounter = 0;
+  // If divisible by three, reset it
+  if (imgCounter % 3 === 0) imgCounter = 0;
 }
 
 // Place the images in the heroes section
@@ -80,16 +92,9 @@ const heroImages = [pinebro, planebro, shiba];
 
 const heroImgElements = Array.from(document.querySelectorAll('.stars img'));
 
-for(let i = 0; i < heroImgElements.length; i++) {
-    heroImgElements[i].src = heroImages[i];
+for (let i = 0; i < heroImgElements.length; i++) {
+  heroImgElements[i].src = heroImages[i];
 }
-
-
-
-
-
-
-
 
 // Add tiny animation for fun
 // There are two images in, this will only get the notification bell
@@ -99,18 +104,11 @@ const bellImg = document.querySelector('.user-bar img');
 let counter = 0;
 
 bellImg.addEventListener('click', function () {
-    if(counter === 0) {
-        bellImg.src = yesBell;
-        counter = 1; 
-    } else {
-        bellImg.src = noBell;
-        counter = 0;
-    }
-    
+  if (counter === 0) {
+    bellImg.src = yesBell;
+    counter = 1;
+  } else {
+    bellImg.src = noBell;
+    counter = 0;
+  }
 });
-
-
-
-
-
-
