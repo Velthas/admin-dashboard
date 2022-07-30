@@ -339,7 +339,7 @@ h3:nth-child(3) {
     grid-template: 1fr 1fr 1fr / 1fr;
 
     align-items: center;
-    justify-items: center;
+    justify-items: start;
 }
 
 .star-player {
